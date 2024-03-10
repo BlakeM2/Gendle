@@ -1,7 +1,7 @@
 # Gendle
-Website imitating the popular game "Wordle" but with Genshin Impact characters instead.
+Website imitating the popular game [Wordle](https://www.nytimes.com/games/wordle/index.html) but with Genshin Impact characters instead.
 
-Built using Node.js
+Built using [Node.js](https://nodejs.org/en)
 
 Utilizes the genshin.dev API found here: https://github.com/genshindev/api
 
