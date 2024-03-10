@@ -1,5 +1,5 @@
 # Gendle
-Website imitating the popular game [Wordle](https://www.nytimes.com/games/wordle/index.html) but with Genshin Impact characters instead.
+Website imitating the popular game [Wordle](https://www.nytimes.com/games/wordle/index.html) but with [Genshin Impact](https://en.wikipedia.org/wiki/Genshin_Impact) characters instead.
 
 Built using [Node.js](https://nodejs.org/en)
 
