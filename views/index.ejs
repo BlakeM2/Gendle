@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="flex-container">
+        <form action="/guess" method="POST">
+            <% if (locals.charlist && !(match)) { %>
+                <select name="index">
+                    <% for (let i = 0; i < charlist.length; i++) { %>
+                        <option value="<%= i %>"><%= charlist[i] %></option>
+                    <% } %>
+                    <input type="submit" value="Guess">
+                </select>
+            <% } %>
+        </form>
+        <% if (locals.matches) { %>
+            <% for (let i = 0; i < Object.keys(matches).length; i++) { %>
+                <div class="guess">
+                    <div class="item <%= matches[i].nameMatch %>">
+                        <img src="https://genshin.jmp.blue/characters/<%= urlname[i] %>/icon-big" alt="picture of character">
+                    </div>
+                    <div class="item <%= matches[i].visionMatch %>">
+                        <img src="/images/<%= matches[i].vision %>.png">
+                    </div>
+                    <div class="item <%= matches[i].weaponMatch %>">
+                        <img src="/images/<%= matches[i].weapon %>.png">
+                    </div>
+                    <div class="item <%= matches[i].genderMatch %>">
+                        <h1><%= matches[i].gender %></h1>
+                    </div>
+                    <div class="item <%= matches[i].nationMatch %> ">
+                        <img src="/images/<%= matches[i].nation %>.png">
+                    </div>
+                </div>
+            <% } %>
+            <% if (match) { %>
+                <a href="/"><button>Again</button></a>
+            <% } %>
+        <% } %>
+    </div>
+</body>
+</html>
