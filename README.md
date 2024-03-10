@@ -5,4 +5,4 @@ Built using Node.js
 
 Utilizes the genshin.dev API found here: https://github.com/genshindev/api
 
-![finished round of Gendle](https://imgur.com/9npIhtr)
+![finished round of Gendle](https://i.imgur.com/9npIhtr.png)
