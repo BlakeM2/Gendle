@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gendle</title>
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
     <div class="flex-container">
-        <form action="/guess" method="POST">
-            <% if (locals.charlist && !(match)) { %>
-                <select name="index">
-                    <% for (let i = 0; i < charlist.length; i++) { %>
-                        <option value="<%= i %>"><%= charlist[i] %></option>
-                    <% } %>
-                    <input type="submit" value="Guess">
-                </select>
-            <% } %>
-        </form>
+        <div class="guess-form">
+            <form action="/guess" method="POST">
+                <% if (locals.charlist && !(match)) { %>
+                    <select name="index" class="dropdown">
+                        <% for (let i = 0; i < charlist.length; i++) { %>
+                            <option class="dropdown-content" value="<%= i %>"><%= charlist[i] %></option>
+                        <% } %>
+                        <input type="submit" value="Guess" class="guess-button">
+                    </select>
+                <% } %>
+            </form>
+            <a href="/"><button class="retry-button">Retry</button></a>
+        </div>
+        
         <% if (locals.matches) { %>
             <% for (let i = 0; i < Object.keys(matches).length; i++) { %>
                 <div class="guess">
@@ -39,7 +43,7 @@
                 </div>
             <% } %>
             <% if (match) { %>
-                <a href="/"><button>Again</button></a>
+                <a href="/"><button class="retry-button">Again</button></a>
             <% } %>
         <% } %>
     </div>

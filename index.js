@@ -60,23 +60,23 @@ app.post("/guess", async (req, res) => {
         nameMatch: false
     }
 
-        if (characterDetails.data.vision === selectedCharacterDetails.data.vision) {
-            matches[guessCount].visionMatch = true;
-        }
-        if (characterDetails.data.weapon === selectedCharacterDetails.data.weapon) {
-            matches[guessCount].weaponMatch = true;
-        }
-        if (characterDetails.data.gender === selectedCharacterDetails.data.gender) {
-            matches[guessCount].genderMatch = true;
-        }
-        if (characterDetails.data.nation === selectedCharacterDetails.data.nation) {
-            matches[guessCount].nationMatch = true;
-        }
-        if (characterDetails.data.name === selectedCharacterDetails.data.name) {
-            matches[guessCount].nameMatch = true;
-        }
+    if (characterDetails.data.vision === selectedCharacterDetails.data.vision) {
+        matches[guessCount].visionMatch = true;
+    }
+    if (characterDetails.data.weapon === selectedCharacterDetails.data.weapon) {
+        matches[guessCount].weaponMatch = true;
+    }
+    if (characterDetails.data.gender === selectedCharacterDetails.data.gender) {
+        matches[guessCount].genderMatch = true;
+    }
+    if (characterDetails.data.nation === selectedCharacterDetails.data.nation) {
+        matches[guessCount].nationMatch = true;
+    }
+    if (characterDetails.data.name === selectedCharacterDetails.data.name) {
+        matches[guessCount].nameMatch = true;
+    }
 
-    res.render("index.ejs", { charlist: charList, matches: matches, urlname: urlname, match: matches[guessCount].nameMatch })
+    res.render("index.ejs", { charlist: charList, matches: matches, urlname: urlname, match: matches[guessCount].nameMatch });    
     guessCount++;
 })
 

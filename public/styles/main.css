@@ -3,7 +3,9 @@ body {
     background-color: #181818;
     background-size: cover;
     background-repeat: no-repeat;
-    backdrop-filter: blur(2px);
+}
+form {
+    display: inline
 }
 .flex-container {
     display: flex;
@@ -11,7 +13,37 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
+.guess-form {
+    padding-bottom: 2rem;
+}
+.dropdown {
+    width: 15rem;
+    height: 2rem;
+    text-align: center;
+}
+.guess-button {
+    width: 5rem;
+    height: 2rem;
+    background-color: #03AED2;
+    border: none;
+    border-bottom-right-radius: 5%;
+    border-top-right-radius: 5%;
+    color: white
+}
+.guess-button:hover {
+    cursor: pointer;
+}
+.retry-button {
+    width: 5rem;
+    height: 2rem;
+    background-color: #E72929;
+    border: none;
+    border-radius: 5%;
+    color: white
+}
+.retry-button:hover {
+    cursor: pointer;
+}
 .guess {
     border: 1px white solid;
     color: pink;
